@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css"> ini
+    <title>FormularioCoche</title>
+
+    
+</head>
+
+<body>
+
+    <!-- cabecera de la pagina -->
+    <header class="cabezera"> 
+        <nav id="nav1">
+            <img id="logo" src="logov2.png" alt="logo">
+            <h1 id="titulo"></h1>
+            <ul>
+                <li>Alejandro Garcia Dorronsoro</li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <!-- COntendor del formulario compra -->
+    <div class="formulariocaja">
+
+        <!-- infopersonal -->
+        <h2 id="rellena">Formulario de compra</h2>
+
+        <h3 id="informacionpersonal">Informacion Personal :</h3>
+        <hr id="lineaprin">
+        <form id="formulario" action="pag2.html" method="get" target="_blank">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre">
+
+            <label for="apellidos">Apellidos</label>
+            <input type="text" id="apellidos" name="apellidos">
+
+            <label for="correo">Correo electrónico</label>
+            <input type="email" name="email" id="email">
+
+            <label for="dni">DNI/NIE:</label>
+            <input type="text" id="dni" name="dni" maxlength="9">
+
+
+
+            <!-- Preguntas formulario -->
+
+            <h3>Formulario :</h3>
+            <p>1. ¿Cuál es tu precio ideal para la compra de un coche?</p>
+            <input id="precio2" type="number" name="precio" required> <br>
+
+            <br>
+            <label id="caballostxt" for="lang">2. Caballos de potencia (CV) :</label> <br>
+            <select name="potencia" id="cv">
+
+                <option value="80 - 100">80 - 100</option>
+                <option value="100 - 150">100 - 150</option>
+                <option value="150 - 200">150 - 200 </option>
+                <option value="200 - 300">200 - 300</option>
+                <option value="300 - 400">300 - 400</option>
+                <option value="400 - +">400 - + </option>
+
+            </select>
+
+            <p>3. ¿Qué tipo de vehículo estás interesado en comprar?</p>
+            <select name="tipo" id="tipo">
+                <option value="Automóvil">Turismo</option>
+                <option value="SUV">SUV</option>
+                <option value="Camioneta">Deportivo</option>
+                <option value="Camióneta">Camióneta</option>
+            </select>
+
+            <p>4. ¿Qué características son más importantes para ti en un coche?</p>
+            <select name="caracteristicas" id="caracteristicas" multiple>
+                <option value="Economía de Combustible">Combustible</option>
+                <option value="Seguridad">Seguridad</option>
+                <option value="Tecnología">Tecnología</option>
+                <option value="Espacio">Espacio</option>
+            </select>
+
+            <p>5. ¿Qué Marca de coche te gustaría?</p>
+            <select name="marca" id="marca" multiple>
+                <option value="Mercedes">Mercedes</option>
+                <option value="BMW">BMW</option>
+                <option value="Audi">Audi</option>
+                <option value="Toyota">Toyota</option>
+            </select>
+
+            <p>6. ¿Qué kilometraje te gustaría para tu coche?</p>
+            <select name="kilometraje" id="kilometraje" multiple>
+                <option value="0 - 50000">1. [ 0 - 50000 ]</option>
+                <option value="50000 - 100000">2. [ 50000 - 100000 ]</option>
+                <option value="100000 - 200000">3. [ 100000 - 200000 ]</option>
+                <option value="200000 - +">4. [ 200000 - + ]</option>
+            </select>
+            <br>
+            <label for="lang">7. ¿Cuantos coches has tenido a tu nombre? :</label>
+            <select name="cochestenidos" id="cv2">
+                <option value="1"> 1</option>
+                <option value="2"> 2</option>
+                <option value="3"> 3 </option>
+                <option value="4"> 4 </option>
+                <option value="5"> 5 </option>
+                <option value="+6"> +6 </option>
+
+            </select>
+
+
+
+            <br>
+
+
+            <h3>Contactar :</h3>
+            <p>Seleciona hora y fecha para ponernos en contacto contigo.</p>
+
+            <label for="fecha">Seleccione el dia : </label>
+            <input type="date" name="fecha" id="fecha">
+
+            <label for="hora">Seleccione la hora :</label>
+            <input type="time" name="hora" id="hora">
+
+
+            <label for="comentario">Comentario</label>
+            <textarea name="comentario" id="comentario" cols="30" rows="5"></textarea>
+
+            <hr>
+            <input id="botonenviar" type="submit" value="Enviar Formulario" />
+        </form>
+    </div>
+
+
+
+    <script>
+        function guardarlocaldatos() {
+
+            // para los inputs
+            localStorage.setItem("nombre", document.getElementById("nombre").value);
+            localStorage.setItem("apellidos", document.getElementById("apellidos").value);
+            localStorage.setItem("email", document.getElementById("email").value);
+            localStorage.setItem("dni", document.getElementById("dni").value);
+            localStorage.setItem("precio", document.getElementById("precio2").value);
+            // fin de los inputs
+
+            // para los select
+            localStorage.setItem("cv", document.getElementById("cv").value);
+            localStorage.setItem("cv2", document.getElementById("cv2").value);
+
+            localStorage.setItem("tipo", document.getElementById("tipo").value);
+            localStorage.setItem("caracteristicas", document.getElementById("caracteristicas").value);
+            localStorage.setItem("marca", document.getElementById("marca").value);
+            localStorage.setItem("kilometraje", document.getElementById("kilometraje").value);
+
+            // no hay mas selects
+
+
+            // para fecha , hora y comentaio
+
+            localStorage.setItem("comentario", document.getElementById("comentario").value);
+            localStorage.setItem("hora", document.getElementById("hora").value);
+            localStorage.setItem("fecha", document.getElementById("fecha").value);
+
+            // fin 
+
+        }
+
+
+        document.getElementById("formulario").addEventListener("submit", guardarlocaldatos);
+    </script>
+
+
+
+</body>
+
+</html>

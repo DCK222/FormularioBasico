@@ -1,0 +1,78 @@
+body{
+    background-image: url(5594016.jpg);
+    align-items: center;
+    overflow: hidden;
+}
+.cabezera2 {
+    background:linear-gradient(to bottom, #123adcab, #0793ff87);
+    padding: px 0;
+    text-align: center;
+    color: #ffffff;
+    box-shadow: 0px 5px 10px rgb(0, 132, 255);
+    text-shadow: 2px 2px 4px #000000;
+}
+#logo {
+    width: 130px;
+}
+#nav1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+    font-weight: bold;
+}
+#respuestas{
+   
+    color:#000000 ;
+    
+    background-color: #d1d1d1;
+    padding: 70px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(222, 20, 20, 0.2);
+    margin: 30px;
+    text-align: left;
+    overflow-y: auto;
+    max-height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    width: 40%;
+    margin-left: 25%;
+    height: 350px;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    text-shadow: 2px 2px 4px #000000;
+    box-shadow: 0px 9px 16px rgb(0, 132, 255);
+    background:linear-gradient(to bottom, #123adcab, #0793ff87);
+    margin-top: 2%;
+}
+::-webkit-scrollbar {
+    width: 10px;
+
+}
+
+::-webkit-scrollbar-track {
+    background-color: rgb(0, 132, 255);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #4f4f4f;
+}
+
+/* hasta aqui */
+#comentario{
+    border-radius: 5px;
+    background-color: #8888881f;
+    border-color: #000000; 
+}
+select{
+    border-radius: 5px;
+    background-color: #8888881f;
+    border-color: #000000;
+}

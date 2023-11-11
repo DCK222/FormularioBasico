@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilopg2.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class="cabezera2">
+        <nav id="nav1">
+            <img id="logo" src="logov2.png" alt="logo">
+            <h1 id="titulo"></h1>
+            <ul>
+                <p>Alejandro Garcia Dorronsoro</p>
+                
+            </ul>
+        </nav>
+    </header>
+    <div id="respuestas">
+        <h2>Respuestas del formulario:</h2>
+        <p>Nombre: <span id="nombre"></span></p>
+        <p>Apellidos: <span id="apellidos"></span></p>
+        <p>Correo electrónico: <span id="email"></span></p>
+        <p>DNI/NIE: <span id="dni"></span></p>
+        <p>Precio: <span id="precio"></span></p>
+        <p>Potencia(CV): <span id="potencia"></span></p>
+        <p>Tipo: <span id="tipo"></span></p>
+        <p>Características: <span id="caracteristicas"></span></p>
+        <p>Marca: <span id="marca"></span></p>
+        <p>Kilometros: <span id="kilometraje"></span></p>
+        <p>Coches tenidos: <span id="cochestenidos"></span></p>
+        <p>Fecha contactar: <span id="fecha"></span></p>
+        <p>Hora contactar: <span id="hora"></span></p>
+        <p>Comentario: <span id="comentario"></span></p>
+    </div>
+
+    <script>
+        
+        const urlParams = new URLSearchParams(window.location.search);
+
+        // recoge y pone la informacion
+        document.getElementById('nombre').textContent = localStorage.getItem('nombre');
+        document.getElementById('apellidos').textContent = localStorage.getItem('apellidos');
+        document.getElementById('email').textContent = localStorage.getItem('email');
+        document.getElementById('dni').textContent = localStorage.getItem('dni');
+        document.getElementById('precio').textContent = localStorage.getItem('precio');
+        document.getElementById('potencia').textContent = localStorage.getItem('cv');
+        
+        document.getElementById('cochestenidos').textContent = localStorage.getItem('cv2');
+        document.getElementById('kilometraje').textContent = localStorage.getItem('kilometraje');
+        document.getElementById('marca').textContent = localStorage.getItem('marca');
+
+        document.getElementById('caracteristicas').textContent = localStorage.getItem('caracteristicas');
+        document.getElementById('tipo').textContent = localStorage.getItem('tipo');
+        document.getElementById('comentario').textContent = localStorage.getItem('comentario');
+        document.getElementById('fecha').textContent = localStorage.getItem('fecha');
+        
+        document.getElementById('hora').textContent = localStorage.getItem('hora');
+
+
+    </script>
+</body>
+</html>
